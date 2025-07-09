@@ -9,6 +9,9 @@ class Solution {
         
         answer = (double) sum / numbers.length;
         
+        // Stream
+        // return Arrays.stream(numbers).average().orElse(0);
+        
         return answer;
     }
 }
