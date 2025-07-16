@@ -1,17 +1,7 @@
-import java.util.Arrays;
-
 class Solution {
     public long solution(int a, int b) {
-        return betweenSum(a, b);
-    }
-    
-    public long betweenSum(int a, int b) {
-        long sum = 0;
-        long min = (long) Math.min(a, b);
-        long max = (long) Math.max(a, b);
-        for (long i = min; i <= max; i++) {
-            sum += i;
-        }
+        long count = Math.abs(b - a); // 정수 개수
+        long sum = ((count + 1) * (a + b)) / 2; // 등차수열 합
         
         return sum;
     }
