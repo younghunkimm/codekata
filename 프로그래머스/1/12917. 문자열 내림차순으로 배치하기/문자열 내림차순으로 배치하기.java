@@ -1,17 +1,10 @@
 import java.util.Arrays;
-import java.util.Collections;
 
 class Solution {
     public String solution(String s) {
-        StringBuilder result = new StringBuilder();
-
-        String[] split = s.split("");
-        Arrays.sort(split, Collections.reverseOrder());
-
-        for (String str : split) {
-            result.append(str);
-        }
+        char[] arr = s.toCharArray();
+        Arrays.sort(arr);
         
-        return result.toString();
+        return new StringBuilder(new String(arr)).reverse().toString();
     }
 }
