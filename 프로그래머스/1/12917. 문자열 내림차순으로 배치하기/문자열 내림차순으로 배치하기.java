@@ -1,10 +1,17 @@
-import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.Collections;
 
 class Solution {
     public String solution(String s) {
-        return s.chars().boxed()
-                .sorted((i, j) -> i < j ? 1 : -1)
-                .map(i -> String.valueOf((char) i.intValue()))
-                .collect(Collectors.joining());
+        StringBuilder result = new StringBuilder();
+
+        String[] split = s.split("");
+        Arrays.sort(split, Collections.reverseOrder());
+
+        for (String str : split) {
+            result.append(str);
+        }
+        
+        return result.toString();
     }
 }
